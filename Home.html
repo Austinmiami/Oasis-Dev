@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis</>Dev | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Left: Logo + Name -->
+        <div class="header-left">
+            <img src="C:\Users\Admin\Downloads\OneDrive\Desktop\MyProject\Logo\Logo.png" alt="Oasis Logo">
+            <h1>Oasis</>Dev</h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://wa.me/254725839870" target="_blank" title="WhatsApp">📱</a>
+            <a href="https://twitter.com/Austblack_Whale" target="_blank" title="X">🐦</a>
+            <a href="https://facebook.com/yourFBprofile" target="_blank" title="Facebook">📘</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <h2>Software Engineering Intern</h2>
+        <p>Building reliable systems, exploring networking & distributed computing, and applying AI to solve real-world problems.</p>
+        <p class="skills">Languages: Java | Python | C++ &nbsp; | &nbsp; Core: DSA, Networking, Distributed Systems & AI &nbsp; | &nbsp; Tools: Git, Linux, Docker</p>
+        <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View Projects</button>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h3>Selected Projects</h3>
+        <div class="project-grid">
+            <div class="project-card">
+                <h4>Chat & File Transfer System</h4>
+                <p>TCP/UDP messaging with file sharing, multi-client support.</p>
+                <p class="tech">Java | Python | Socket Programming | Multi-threading</p>
+            </div>
+            <div class="project-card">
+                <h4>Distributed Key-Value Store</h4>
+                <p>Fault-tolerant distributed storage with leader election.</p>
+                <p class="tech">Python | Flask | Docker | Distributed Systems</p>
+            </div>
+            <div class="project-card">
+                <h4>Algorithm Visualizer</h4>
+                <p>Interactive visualization of DSA & pathfinding algorithms.</p>
+                <p class="tech">Python | Tkinter / React | Graph Algorithms</p>
+            </div>
+            <div class="project-card">
+                <h4>Text Classification System</h4>
+                <p>Applied machine learning for text analysis and classification.</p>
+                <p class="tech">Python | scikit-learn | TensorFlow | NLP</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h3>Skills</h3>
+        <div class="skills-grid">
+            <div class="skills-column">
+                <h4>Languages</h4>
+                <p>Java | Python | C++</p>
+            </div>
+            <div class="skills-column">
+                <h4>Core Knowledge</h4>
+                <p>DSA | Networking | Distributed Systems | Operating Systems</p>
+            </div>
+            <div class="skills-column">
+                <h4>Tools</h4>
+                <p>Git | Linux | Docker | Flask / FastAPI</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h3>About Me</h3>
+        <p>I’m a Computer Science student seeking software engineering internships. I focus on building reliable, scalable systems, exploring networking and distributed computing, and applying AI to practical problems. I enjoy working close to the fundamentals—performance, reliability, and scalability.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-info">
+            <h3>Let's Connect</h3>
+            <p>Email: nyagajustin5@gmail.com</p>
+            <p>GitHub: <a href="https://github.com/Austinmiami" target="_blank">github.com/Austinmiami</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/alandawson" target="_blank">linkedin.com/in/alandawson</a></p>
+        </div>
+        <div class="contact-form">
+            <h3>Contact Form</h3>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Oasis</>Dev   </footer>
+
+</body>
+</html>
