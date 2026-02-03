@@ -1,121 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oasis</>Dev | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oasis Dev | Software Engineering Portfolio</title>
+  <meta name="description" content="Oasis Dev — Portfolio of Austin: systems, networking, distributed systems, and AI projects." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Oasis Dev | Austin — Software Engineering Portfolio" />
+  <meta property="og:description" content="Systems, distributed systems, networking and ML projects." />
+  <meta property="og:image" content="/images/Logo.png" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <!-- Fonts performance -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured data (replace fields as appropriate) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Austin",
+    "url":"https://yourdomain.com",
+    "sameAs":[
+      "https://github.com/Austinmiami",
+      "https://twitter.com/Austblack_Whale",
+      "https://www.linkedin.com/in/alandawson"
+    ],
+    "jobTitle":"Software Engineering Intern",
+    "description":"Building reliable, scalable systems; networking, distributed systems, and applying AI."
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header -->
-    <header>
-        <!-- Left: Logo + Name -->
-        <div class="header-left">
-            <img src="images\Logo.png" alt="Oasis Logo">
-            <h1>Oasis Dev</h1>
-        </div>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="/" class="brand" aria-label="Oasis Dev home">
+          <img src="images/Logo.png" alt="Oasis Dev logo" width="56" height="56" loading="lazy">
+          <h1>Oasis Dev</h1>
+        </a>
+      </div>
 
-        <!-- Navigation -->
-        <nav>
-            <a href="#hero">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
 
-        <!-- Social Icons -->
-        <div class="social-icons">
-            <a href="https://wa.me/254725839870" target="_blank" title="WhatsApp">📱</a>
-            <a href="https://twitter.com/Austblack_Whale" target="_blank" title="X">🐦</a>
-            <a href="https://www.facebook.com/profile.php?id=100093574300113" target="_blank" title="Facebook">📘</a>
-        </div>
-    </header>
+      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
+      <div class="social-icons" aria-hidden="false">
+        <a href="https://wa.me/254725839870" target="_blank" rel="noopener" title="WhatsApp">📱</a>
+        <a href="https://twitter.com/Austblack_Whale" target="_blank" rel="noopener" title="X">🐦</a>
+        <a href="https://www.facebook.com/profile.php?id=100093574300113" target="_blank" rel="noopener" title="Facebook">📘</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
     <!-- Hero Section -->
     <section id="hero" class="hero">
+      <div class="hero-inner">
         <h2>Software Engineering Intern</h2>
-        <p>Building reliable systems, exploring networking & distributed computing, and applying AI to solve real-world problems.</p>
+        <p class="lead">Building reliable systems, exploring networking & distributed computing, and applying AI to solve real-world problems.</p>
         <p class="skills">Languages: Java | Python | C++ &nbsp; | &nbsp; Core: DSA, Networking, Distributed Systems & AI &nbsp; | &nbsp; Tools: Git, Linux, Docker</p>
-        <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View Projects</button>
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="/resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h3>Selected Projects</h3>
-        <div class="project-grid">
-            <div class="project-card">
-                <h4>Chat & File Transfer System</h4>
-                <p>TCP/UDP messaging with file sharing, multi-client support.</p>
-                <p class="tech">Java | Python | Socket Programming | Multi-threading</p>
+      <h3>Selected Projects</h3>
+      <div class="project-grid">
+
+        <article class="project-card" aria-labelledby="p1-title">
+          <img src="images/project1.png" alt="Chat & File Transfer preview" loading="lazy" width="600" height="340">
+          <div class="project-body">
+            <h4 id="p1-title">Chat & File Transfer System</h4>
+            <p>TCP/UDP messaging with file sharing and multi-client support. Designed for reliability and concurrent clients.</p>
+            <p class="tech">Java | Python | Socket Programming | Multi-threading</p>
+            <div class="project-links">
+              <a href="https://github.com/Austinmiami/chat-file-transfer" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://example-demo-1.netlify.app" target="_blank" rel="noopener">Live demo</a>
             </div>
-            <div class="project-card">
-                <h4>Distributed Key-Value Store</h4>
-                <p>Fault-tolerant distributed storage with leader election.</p>
-                <p class="tech">Python | Flask | Docker | Distributed Systems</p>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="p2-title">
+          <img src="images/project2.png" alt="Distributed key-value store preview" loading="lazy" width="600" height="340">
+          <div class="project-body">
+            <h4 id="p2-title">Distributed Key-Value Store</h4>
+            <p>Fault-tolerant distributed storage with leader election and replication. Dockerized with a simple API.</p>
+            <p class="tech">Python | Flask | Docker | Distributed Systems</p>
+            <div class="project-links">
+              <a href="https://github.com/Austinmiami/dist-kv-store" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://example-demo-2.netlify.app" target="_blank" rel="noopener">Live demo</a>
             </div>
-            <div class="project-card">
-                <h4>Algorithm Visualizer</h4>
-                <p>Interactive visualization of DSA & pathfinding algorithms.</p>
-                <p class="tech">Python | Tkinter / React | Graph Algorithms</p>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="p3-title">
+          <img src="images/project3.png" alt="Algorithm visualizer preview" loading="lazy" width="600" height="340">
+          <div class="project-body">
+            <h4 id="p3-title">Algorithm Visualizer</h4>
+            <p>Interactive visualization of DSA & pathfinding algorithms. Useful for teaching and testing algorithmic variations.</p>
+            <p class="tech">React | JavaScript | Graph Algorithms</p>
+            <div class="project-links">
+              <a href="https://github.com/Austinmiami/algorithm-visualizer" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://example-demo-3.netlify.app" target="_blank" rel="noopener">Live demo</a>
             </div>
-            <div class="project-card">
-                <h4>Text Classification System</h4>
-                <p>Applied machine learning for text analysis and classification.</p>
-                <p class="tech">Python | scikit-learn | TensorFlow | NLP</p>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="p4-title">
+          <img src="images/project4.png" alt="Text classification preview" loading="lazy" width="600" height="340">
+          <div class="project-body">
+            <h4 id="p4-title">Text Classification System</h4>
+            <p>Applied machine learning pipelines for text analysis and classification with measurable accuracy improvements.</p>
+            <p class="tech">Python | scikit-learn | TensorFlow | NLP</p>
+            <div class="project-links">
+              <a href="https://github.com/Austinmiami/text-classifier" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://example-demo-4.netlify.app" target="_blank" rel="noopener">Live demo</a>
             </div>
-        </div>
+          </div>
+        </article>
+
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
-        <h3>Skills</h3>
-        <div class="skills-grid">
-            <div class="skills-column">
-                <h4>Languages</h4>
-                <p>Java | Python | C++</p>
-            </div>
-            <div class="skills-column">
-                <h4>Core Knowledge</h4>
-                <p>DSA | Networking | Distributed Systems | Operating Systems</p>
-            </div>
-            <div class="skills-column">
-                <h4>Tools</h4>
-                <p>Git | Linux | Docker | Flask / FastAPI</p>
-            </div>
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skills-column">
+          <h4>Languages</h4>
+          <p>Java | Python | C++</p>
         </div>
+        <div class="skills-column">
+          <h4>Core Knowledge</h4>
+          <p>DSA | Networking | Distributed Systems | Operating Systems</p>
+        </div>
+        <div class="skills-column">
+          <h4>Tools</h4>
+          <p>Git | Linux | Docker | Flask / FastAPI</p>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <h3>About Me</h3>
-        <p>I’m a Computer Science student seeking software engineering internships. I focus on building reliable, scalable systems, exploring networking and distributed computing, and applying AI to practical problems. I enjoy working close to the fundamentals—performance, reliability, and scalability.</p>
+      <h3>About Me</h3>
+      <p>I’m a Computer Science student seeking software engineering internships. I focus on building reliable, scalable systems, exploring networking and distributed computing, and applying AI to practical problems.</p>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
+      <div class="contact-inner">
+
         <div class="contact-info">
-            <h3>Let's Connect</h3>
-            <p>Email: nyagajustin5@gmail.com</p>
-            <p>GitHub: <a href="https://github.com/Austinmiami" target="_blank">github.com/Austinmiami</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/alandawson" target="_blank">linkedin.com/in/alandawson</a></p>
+          <h3>Let's Connect</h3>
+          <p>Email: <a href="mailto:nyagajustin5@gmail.com">nyagajustin5@gmail.com</a></p>
+          <p>GitHub: <a href="https://github.com/Austinmiami" target="_blank" rel="noopener">github.com/Austinmiami</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/alandawson" target="_blank" rel="noopener">linkedin.com/in/alandawson</a></p>
         </div>
+
         <div class="contact-form">
-            <h3>Contact Form</h3>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea rows="5" placeholder="Message" required></textarea>
-            <button type="submit">Send Message</button>
+          <h3>Contact Form</h3>
+          <!-- Replace "yourFormID" with your Formspree form ID (example: f/mnqxyz) -->
+          <form id="contactForm" action="https://formspree.io/f/yourFormID" method="POST" novalidate>
+            <label class="visually-hidden" for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Name" required>
+
+            <label class="visually-hidden" for="email">Email</label>
+            <input id="email" name="_replyto" type="email" placeholder="Email" required>
+
+            <label class="visually-hidden" for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+
+            <!-- Honeypot (hidden to users) to reduce spam -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <!-- Optional subject -->
+            <input type="hidden" name="_subject" value="Website contact form message">
+
+            <button type="submit" class="btn">Send Message</button>
+            <p id="formStatus" role="status" aria-live="polite" class="form-status"></p>
+          </form>
         </div>
+
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2026 Oasis Dev   </footer>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>&copy; 2026 Oasis Dev</p>
+    </div>
+  </footer>
 
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const primaryNav = document.getElementById('primary-nav');
+
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      primaryNav.classList.toggle('open');
+
+      // NEW: toggle class used by CSS to animate the hamburger
+      navToggle.classList.toggle('open');
+    });
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"] ').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (href.length > 1) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+          // close nav on link click (mobile)
+          if (primaryNav.classList.contains('open')) {
+            primaryNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+    });
+
+    // Basic client-side validation + Formspree feedback
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = '';
+
+      if (!form.checkValidity()) {
+        status.textContent = 'Please fill out all required fields correctly.';
+        return;
+      }
+
+      // If you want to use Formspree's AJAX endpoint, we can send here
+      const data = new FormData(form);
+      const action = form.getAttribute('action');
+      if (action.includes('formspree.io')) {
+        try {
+          const res = await fetch(action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            status.textContent = 'Thanks — message sent!';
+            form.reset();
+          } else {
+            const json = await res.json();
+            status.textContent = json.error || 'Submission failed. Try again later.';
+          }
+        } catch (err) {
+          status.textContent = 'Network error. Please try again later.';
+        }
+      } else {
+        // Non-Formspree fallback: submit normally
+        form.submit();
+      }
+    });
+  </script>
 </body>
-
 </html>
-
