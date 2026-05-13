@@ -6,7 +6,9 @@ This repository contains a professional software engineering portfolio website f
 
 - `index.html` — The main portfolio homepage.
 - `style.css` — The stylesheet that controls the portfolio layout and visual design.
-- `Document1/resume.pdf` — Resume file linked from the homepage (if present).
+- `resume.html` — The updated resume page for viewing and printing.
+- `Document1/resume.md` — The updated resume content in markdown format.
+- `Document1/resume.pdf` — Existing resume file linked from the homepage (if present).
 - `images/` — Image assets used by the portfolio.
 
 ## Features
