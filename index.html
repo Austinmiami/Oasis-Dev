@@ -1,47 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oasis Dev | Software Engineering Portfolio</title>
+  <meta name="description" content="Oasis Dev — Portfolio of Austin: systems, networking, distributed systems, and AI projects." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Oasis Dev | Austin — Software Engineering Portfolio" />
+  <meta property="og:description" content="Systems, distributed systems, networking and AI projects." />
+  <meta property="og:image" content="/images/Logo.png" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/images/Logo.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Austin",
+    "url":"https://yourdomain.com",
+    "sameAs":[
+      "https://github.com/Austinmiami",
+      "https://twitter.com/Austblack_Whale",
+      "https://www.linkedin.com/in/alandawson"
+    ],
+    "jobTitle":"Software Engineering Intern",
+    "description":"Building reliable, scalable systems; networking, distributed systems, and applying AI."
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-    </header>
-    <nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="/" class="brand" aria-label="Oasis Dev home">
+          <img src="images/Logo.png" alt="Oasis Dev logo" width="56" height="56" loading="lazy" />
+          <h1>Oasis Dev</h1>
+        </a>
+      </div>
+
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume" target="_blank">Resume</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my enhanced portfolio! I am a passionate developer...</p>
+      </nav>
+
+      <div class="social-icons" aria-hidden="false">
+        <a href="https://wa.me/254725839870" target="_blank" rel="noopener" title="WhatsApp">📱</a>
+        <a href="https://twitter.com/Austblack_Whale" target="_blank" rel="noopener" title="X">🐦</a>
+        <a href="https://www.facebook.com/profile.php?id=100093574300113" target="_blank" rel="noopener" title="Facebook">📘</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <h2>Software Engineer focused on scalable systems</h2>
+        <p class="lead">I design reliable backend services, distributed platforms, and modern web applications with strong engineering discipline and measurable results.</p>
+        <p class="skills">Java · Python · C++ · React · Node.js · Docker · Linux · Distributed Systems</p>
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="Document1/resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
     </section>
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <img src="path/to/project-image1.jpg" alt="Project 1">
-            <h3>Project Title 1</h3>
-            <p>Project description...</p>
-        </div>
-        <div class="project">
-            <img src="path/to/project-image2.jpg" alt="Project 2">
-            <h3>Project Title 2</h3>
-            <p>Project description...</p>
-        </div>
-        <!-- Add more projects as needed -->
+
+    <section id="projects" class="projects">
+      <h3>Featured GitHub Projects</h3>
+      <div class="project-grid">
+
+        <article class="project-card" aria-labelledby="project-campus-title">
+          <div class="project-image-container">
+            <div class="project-image-placeholder">Campus Hub</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h4 id="project-campus-title">Campus Hub</h4>
+            <p>A campus-exclusive full-stack platform for verified students. Combines marketplace features, lost &amp; found reports, messaging, and mobile-friendly digital payments.</p>
+            <p class="tech">React | Node.js | MongoDB | Socket.IO | Payments</p>
+            <div class="project-links">
+              <a href="https://github.com/Austinmiami/Campus-hub" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="project-chat-title">
+          <div class="project-image-container">
+            <div class="project-image-placeholder">ChitChat</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h4 id="project-chat-title">ChitChat</h4>
+            <p>A professional chat application built for real-time communication. Includes secure channels, responsive UI, and fast message delivery using socket-driven architecture.</p>
+            <p class="tech">MongoDB | Express | React | Node | Socket.IO</p>
+            <div class="project-links">
+              <a href="https://github.com/Austinmiami/chat-app-project" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="project-lostfound-title">
+          <div class="project-image-container">
+            <div class="project-image-placeholder">Lost &amp; Found</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h4 id="project-lostfound-title">Lost &amp; Found System</h4>
+            <p>Full-stack platform for campus communities to report and recover lost property. Supports item posting, search, real-time chat, and smart matching between reports.</p>
+            <p class="tech">React | Node.js | PostgreSQL | Real-Time Messaging</p>
+            <div class="project-links">
+              <a href="https://github.com/Austinmiami/Lost-Found-Items-Management-System" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="project-hackathon-title">
+          <div class="project-image-container">
+            <div class="project-image-placeholder">Hackathon Build</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h4 id="project-hackathon-title">Hackathon Prototype</h4>
+            <p>A fast-moving hackathon project that demonstrates rapid prototyping, teamwork, and clean UI design under tight deadlines.</p>
+            <p class="tech">JavaScript | HTML | CSS | Collaboration</p>
+            <div class="project-links">
+              <a href="https://github.com/Austinmiami/hackerthon" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="project-base-title">
+          <div class="project-image-container">
+            <div class="project-image-placeholder">Core Toolkit</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h4 id="project-base-title">Development Toolkit</h4>
+            <p>Repository for reusable components, deployment practice, and rapid experimentation. Supports clean, maintainable builds for future applications.</p>
+            <p class="tech">JavaScript | Node.js | Web Development</p>
+            <div class="project-links">
+              <a href="https://github.com/Austinmiami/project" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="project-portfolio-title">
+          <div class="project-image-container">
+            <div class="project-image-placeholder">Portfolio Source</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h4 id="project-portfolio-title">Oasis Dev Portfolio</h4>
+            <p>This portfolio site is built to showcase professional work, accessible navigation, and polished presentation for hiring managers and recruiters.</p>
+            <p class="tech">HTML | CSS | JavaScript</p>
+            <div class="project-links">
+              <a href="https://github.com/Austinmiami/Oasis-Dev" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="hero-actions" style="justify-content: center; margin-top: 32px;">
+        <a class="btn ghost" href="https://github.com/Austinmiami" target="_blank" rel="noopener">See all GitHub projects</a>
+      </div>
     </section>
-    <footer>
-        <h2>Connect with Me</h2>
-        <div class="social-icons">
-            <a href="https://twitter.com/yourprofile"><img src="path/to/twitter-icon.svg" alt="Twitter"></a>
-            <a href="https://linkedin.com/in/yourprofile"><img src="path/to/linkedin-icon.svg" alt="LinkedIn"></a>
-            <a href="https://github.com/yourprofile"><img src="path/to/github-icon.svg" alt="GitHub"></a>
+
+    <section id="skills" class="skills-section">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skills-column">
+          <h4>Languages</h4>
+          <p>Java | Python | C++ | JavaScript | SQL</p>
         </div>
-    </footer>
+        <div class="skills-column">
+          <h4>Core Expertise</h4>
+          <p>Distributed Systems | Networking | Software Architecture | Data Structures</p>
+        </div>
+        <div class="skills-column">
+          <h4>Tools</h4>
+          <p>Git | Linux | Docker | React | Node.js | Flask</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h3>About Me</h3>
+      <p>I’m a Computer Science student seeking software engineering internships. I focus on building reliable, scalable systems, exploring networking and distributed computing, and applying AI to practical problems.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-inner">
+
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p>Email: <a href="mailto:nyagajustin5@gmail.com">nyagajustin5@gmail.com</a></p>
+          <p>GitHub: <a href="https://github.com/Austinmiami" target="_blank" rel="noopener">github.com/Austinmiami</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/alandawson" target="_blank" rel="noopener">linkedin.com/in/alandawson</a></p>
+        </div>
+
+        <div class="contact-form">
+          <h3>Contact Form</h3>
+          <form id="contactForm" action="https://formspree.io/f/xlglqopw" method="POST" novalidate>
+            <label class="visually-hidden" for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Name" required />
+
+            <label class="visually-hidden" for="email">Email</label>
+            <input id="email" name="_replyto" type="email" placeholder="Email" required />
+
+            <label class="visually-hidden" for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+
+            <input type="text" name="_gotcha" style="display:none" />
+            <input type="hidden" name="_subject" value="Website contact form message" />
+            <button type="submit" class="btn">Send Message</button>
+            <p id="formStatus" role="status" aria-live="polite" class="form-status"></p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>&copy; 2026 Oasis Dev</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const primaryNav = document.getElementById('primary-nav');
+
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      primaryNav.classList.toggle('open');
+      navToggle.classList.toggle('open');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (href.length > 1) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+          if (primaryNav.classList.contains('open')) {
+            primaryNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+    });
+
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = '';
+
+      if (!form.checkValidity()) {
+        status.textContent = 'Please fill out all required fields correctly.';
+        return;
+      }
+
+      const data = new FormData(form);
+      const action = form.getAttribute('action');
+      if (action.includes('formspree.io')) {
+        try {
+          const res = await fetch(action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            status.textContent = 'Thanks — message sent!';
+            form.reset();
+          } else {
+            const json = await res.json();
+            status.textContent = json.error || 'Submission failed. Try again later.';
+          }
+        } catch (err) {
+          status.textContent = 'Network error. Please try again later.';
+        }
+      } else {
+        form.submit();
+      }
+    });
+  </script>
 </body>
 </html>
