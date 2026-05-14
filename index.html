@@ -18,6 +18,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Google Analytics -->
+  <!-- Replace G-XXXXXXXXXX with your own GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -291,8 +301,12 @@
             headers: { 'Accept': 'application/json' }
           });
           if (res.ok) {
-            status.textContent = 'Thanks — message sent!';
-            form.reset();
+            status.textContent = 'Thanks — your message was sent successfully! Redirecting...';
+            setTimeout(() => {
+              status.textContent = '';
+              form.reset();
+              window.location.hash = '#contact';
+            }, 2000);
           } else {
             const json = await res.json();
             status.textContent = json.error || 'Submission failed. Try again later.';
@@ -304,6 +318,7 @@
         form.submit();
       }
     });
+  // For spam protection, Formspree already uses a honeypot. For more, consider Google reCAPTCHA or upgrading your Formspree plan.
   </script>
 </body>
 </html>
