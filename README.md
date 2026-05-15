@@ -1,6 +1,6 @@
 # Oasis Dev Portfolio
 
-This repository contains a professional software engineering portfolio website for Austin (`Oasis Dev`). It showcases GitHub projects, skills, and contact information in a clean, modern layout.
+This repository contains a professional software engineering portfolio website for Justin Muriithi Nyaga (`Oasis Dev`). It showcases GitHub projects, skills, and contact information in a clean, modern layout.
 
 ## Files
 
